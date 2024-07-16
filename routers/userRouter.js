@@ -5,6 +5,8 @@
 
  const router = express.Router()
 
+
+// Create user
  router.post('/', async (req, res) => {
     try {
         const text =  "insert into users (email,password,fullname) VALUES ($1, crypt($2, gen_salt('bf')), $3) RETURNING*"
